@@ -16,7 +16,7 @@
 
    ![](images/1.png)
 
-2. 第206行代码填入哔哩哔哩MID号
+2. 第206行代码填入哔哩哔哩ID号
 
    ![](images/2.png)
 
@@ -26,3 +26,6 @@
 
 https://github.com/jhao104/proxy_pool
 
+### 项目参考：
+
+https://github.com/xu0329/bilibili_proxy
