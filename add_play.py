@@ -1,28 +1,15 @@
-import subprocess
-from PyQt5.QtCore import QThread
 from functools import reduce
 import hashlib
 import time
 import urllib.parse
 import requests
 from fake_useragent import UserAgent
-import os
-
 ua = UserAgent()
-
-class RedisProxy(QThread):
-    def __init__(self):
-        super(RedisProxy,self).__init__()
-        self.index = ''
-    def openRedis(self):
-        # print("你好")
-        os.chdir("E:\\developer\\environment\\Redis-x64-3.2.100")
-        subprocess.Popen("redis-server.exe redis.windows.conf")
-class Bilibili_User_Videos(QThread):
+class Bilibili_User_Videos():
     def __init__(self):
         super(Bilibili_User_Videos,self).__init__()
         # self.MID=MID
-        self.SESSDATA = 'd8b01d70%2C1720023170%2C3b8d4%2A11CjBCI2qZfY7M9uB-6Os0X412JvYfAz9vFSKVdHAArG7hbMYNjjjMyQ1thrZ_80l0oI8SVlFLR19RUE1GdEJVNkZzZWZvdWNkSHZwYjBfTUpLN2VFS2ZOU00tNE1kZEVLNWJtZmJ1aEpnRUJKNzg4b0ptX25paGI1NWh6dWVtNjdBTnFLdVY3MVlnIIEC'
+        self.SESSDATA = 'xxx'
         self.headers = {
             'User-Agent': ua.random,
             'Cookie': 'SESSDATA=' + self.SESSDATA,
@@ -138,7 +125,7 @@ class Bilibili_User_Videos(QThread):
         else:
             return self.dic2bvid(data)
 
-class playback_quantity(QThread):
+class playback_quantity():
     def __init__(self,bvid):
         super(playback_quantity,self).__init__()
         # 视频bv号放这里，格式如下
@@ -216,7 +203,7 @@ class playback_quantity(QThread):
 if __name__ == '__main__':
 # test get BvidList
     bilibili_user_video_parse = Bilibili_User_Videos()
-    table_list = bilibili_user_video_parse.getBvidList('485111228')
+    table_list = bilibili_user_video_parse.getBvidList('xxx')
 
     if table_list is None:
         print('没有需要播放的视频')
