@@ -4,7 +4,7 @@
 
 1. ID
 
-   [【教程】如何查询自己的B站UID - 哔哩哔哩 (bilibili.com)](https://www.bilibili.com/read/cv10563065/#:~:text=第一步： 个人空间传送门,，点击转到自己的个人空间 第二部：找到自己的uid 红圈标注处即为uid)
+   https://www.bilibili.com/read/cv10563065/
 
 2. SESSDATA
 
